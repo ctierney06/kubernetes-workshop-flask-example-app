@@ -1,3 +1,4 @@
+import logging
 from flask_restful import Resource, reqparse
 from ..repositories.pantry import Pantry
 from ..repositories.sqlalchemy_pantry import SQLAlchemyPantry
@@ -15,6 +16,7 @@ substance_schema = SubstanceSchema()
 class AlembicInstructionResource(Resource):
     def get(self):
         """This should return past requests/commands."""
+        logging.error("My error message")
         return "HELLO CHRIS"
 
     def post(self):
